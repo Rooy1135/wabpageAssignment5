@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Leaves and a Bud Clone</title>
+    <!-- Single CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. TOP ANNOUNCEMENT BAR -->
+    <div class="top-banner">
+        FREE US SHIPPING FOR ORDERS OVER $75
+    </div>
+
+    <!-- 2. MAIN HEADER NAVIGATION -->
+    <header class="main-header">
+        <nav class="nav-left">
+            <!-- SHOP DROPDOWN -->
+            <div class="nav-item dropdown-trigger" onclick="toggleDropdown('shop-drop')">
+                <a href="javascript:void(0)">Shop <span class="arrow">⌃</span></a>
+                <div class="mega-dropdown-panel" id="shop-drop">
+                    <div class="mega-dropdown-grid">
+                        <div class="mega-col">
+                            <h4>TEA VARIETIES</h4>
+                            <ul>
+                                <li><a href="#">Whole Leaf Tea Sachets</a></li>
+                                <li><a href="#">Pure Matcha</a></li>
+                                <li><a href="#">Tea Lattes</a></li>
+                                <li><a href="#">Iced Tea</a></li>
+                            </ul>
+                            <a href="#" class="blue-cta-btn">Shop All Teas</a>
+                        </div>
+                        <div class="mega-col">
+                            <h4>COLLECTIONS</h4>
+                            <ul>
+                                <li><a href="#">Matcha</a></li>
+                                <li><a href="#">Chai</a></li>
+                                <li><a href="#">Organic Tea</a></li>
+                                <li><a href="#">Naked Tea Sachets</a></li>
+                                <li><a href="#">Black Tea</a></li>
+                                <li><a href="#">Green Tea</a></li>
+                                <li><a href="#">Herbal Tea</a></li>
+                                <li><a href="#">Caffeine-Free</a></li>
+                                <li><a href="#">Gifts & Samplers</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-col-promo">
+                            <h4>SHOP BEST SELLERS</h4>
+                            <div class="promo-cards-row">
+                                <div class="mini-promo-card bg-green-light">
+                                    <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/tea/n/v/d/42-premium-zero-sugar-instant-matcha-latte-pack-of-3-sachets-3-original-imahadfghczh64r5.jpeg?q=90" alt="Matcha">
+                                    <p>Ceremonial Matcha - 1 oz Tin</p>
+                                </div>
+                                <div class="mini-promo-card bg-orange-light">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9r1c8ZjN_5Z1jvOvnKxQyemwbOXLZA6XVcw&s" alt="Chai">
+                                    <p>Nice Chai Tea Latte Mix</p>
+                                </div>
+                                <div class="mini-promo-card bg-teal-light">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQVx4XWB4N_kNH6DaIl0sVNv28VDi21Cmveg&s" alt="Earl Grey">
+                                    <p>Organic Earl Grey Tea</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEARN DROPDOWN -->
+            <div class="nav-item dropdown-trigger" onclick="toggleDropdown('learn-drop')">
+                <a href="javascript:void(0)">Learn <span class="arrow">⌃</span></a>
+                <div class="mega-dropdown-panel" id="learn-drop">
+                    <div class="learn-cards-container">
+                        <div class="learn-card"><div class="img-placeholder">🛶</div><p>Our Story</p></div>
+                        <div class="learn-card"><div class="img-placeholder">🏔️</div><p>Our Spirit</p></div>
+                        <div class="learn-card"><div class="img-placeholder">🍵</div><p>For Cafes and Partners</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item" onclick="toggleDropdown('reviews-page-panel')">
+                <a href="javascript:void(0)">Reviews ⭐</a>
+            </div>
+        </nav>
+
+        <div class="logo-container">
+            <a href="#" class="logo-text">two leaves<br><span class="and-a-bud">and a bud</span></a>
+        </div>
+
+        <nav class="nav-right">
+            <div class="nav-item" onclick="toggleDropdown('login-page-panel')"><a href="javascript:void(0)">MY ACCOUNT</a></div>
+            <div class="nav-item"><a href="#">CAFE & WHOLESALE PARTNERS</a></div>
+            <div class="nav-item"><a href="#">TEA JOURNAL</a></div>
+        </nav>
+    </header>
+
+
+    <!-- ==================================================== -->
+    <!-- DROPDOWN TOGGLE BLOCKS (Hidden by default, open on click) -->
+    <!-- ==================================================== -->
+    
+    <!-- REVIEWS MODAL INNER PANEL -->
+    <div class="mega-dropdown-panel full-page-slide" id="reviews-page-panel">
+        <h2 class="reviews-display-title">Overheard at the Café</h2>
+        <div class="display-stars-counter">★★★★★ <span class="reviews-count-txt">2341</span></div>
+        <div class="reviews-stack-rows">
+            <div class="review-row-item">
+                <div class="row-star-rating">★★★★★</div><div class="row-date-stamp">05/18/2026</div>
+                <h4 class="row-headline-title">Amazing</h4>
+                <p class="row-buyer-identity">Chanie E. <span class="verified-check-mark">✓ Verified Buyer</span></p>
+                <p class="row-quote-comment">" This is a lovely taste. I've been putting it in a glass jar and letting the sun brew it. It's amazing! Thank you "</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MY ACCOUNT CENTRAL LOGIN PANEL -->
+    <div class="mega-dropdown-panel full-page-slide" id="login-page-panel">
+        <h2 class="login-main-header">Login</h2>
+        <div class="login-green-container-box">
+            <form onsubmit="event.preventDefault();" class="central-form-layout">
+                <div class="central-input-group"><label>EMAIL</label><input type="email" placeholder="Email" required></div>
+                <div class="central-input-group"><label>PASSWORD</label><input type="password" placeholder="Password" required></div>
+                <button type="submit" class="central-black-pill-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ==================================================== -->
+    <!-- MAIN PAGE SEQUENCE (Jo scroll karne par dikhega)      -->
+    <!-- ==================================================== -->
+
+    <!-- BASE HERO SECTION (Teal Background Box) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">A cup that fits the moment.</h1>
+            <p class="hero-description">From compostable whole leaf tea sachets and iced tea to tea lattes and matcha, we've got something for everyone.</p>
+            <a href="#" class="btn-shop-now">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- BEST SELLERS INTRO BANNER -->
+    <section class="bestsellers-intro">
+        <h2 class="intro-statement">A <i>great</i> cup starts with a careful<br>pluck - the top two leaves and a bud.</h2>
+        <div class="bestsellers-badge">BEST SELLERS</div>
+    </section>
+
+    <!-- 9 PRODUCTS SCROLL SLIDER CONTAINER -->
+    <section class="slider-container">
+        <button class="slider-btn prev-btn" onclick="moveProductSlider(-1)">&#10094;</button>
+        <button class="slider-btn next-btn" onclick="moveProductSlider(1)">&#10095;</button>
+        <div class="slider-wrapper">
+            <div class="product-track" id="main-product-track-element">
+                <!-- PRODUCT 1 -->
+                <div class="product-card">
+                    <div class="product-image-box color-teal-light">
+                        <span class="product-tag">TEA SACHETS</span> <span class="product-rating">★ 4.71 (84)</span>
+                        <img src="https://storehousetea.com/cdn/shop/files/IMG_6094_1024x1024@2x.jpg?v=1724960374" class="product-img">
+                        <button class="btn-add-to-cart">+</button>
+                    </div>
+                    <h3 class="product-title">Organic Tropical Green Tea</h3>
+                    <p class="product-price">From $11.95</p>
+                    <p class="product-desc">Our Organic Tropical Green is a fruity and fun classic green tea.</p>
+                </div>
+                <!-- PRODUCT 2 -->
+                <div class="product-card">
+                    <div class="product-image-box color-beige-light">
+                        <span class="product-tag">GIFTS & SAMPLERS</span> <span class="product-rating">★ 5 (2)</span>
+                        <img src="https://m.media-amazon.com/images/I/81l5Cej87EL._AC_UF894,1000_QL80_.jpg" class="product-img">
+                        <button class="btn-add-to-cart">+</button>
+                    </div>
+                    <h3 class="product-title">Herbal Tea Trio</h3>
+                    <p class="product-price">$33.30</p>
+                    <p class="product-desc">A trio of soothing herbal teas.</p>
+                </div>
+                <!-- PRODUCT 3 -->
+                <div class="product-card">
+                    <div class="product-image-box color-teal-dark">
+                        <span class="product-tag">NAKED SACHETS</span> <span class="product-rating">★ 5 (11)</span>
+                        <img src="https://www.twoleavestea.com/cdn/shop/files/OrgMtnHighChai_naked50_spill_copy.webp?v=1774287422&width=360" class="product-img">
+                        <button class="btn-add-to-cart">+</button>
+                    </div>
+                    <h3 class="product-title">Organic Peppermint 50 Sachets</h3>
+                    <p class="product-price">$21.95</p>
+                    <p class="product-desc">Our organic Peppermint tea is made from peppermint grown in Washington State.</p>
+                </div>
+                <!-- PRODUCT 4 -->
+                <div class="product-card">
+                    <div class="product-image-box color-blue-grey">
+                        <span class="product-tag">GIFTS & SAMPLERS</span> <span class="product-rating">★ 4.85 (41)</span>
+                        <img src="https://www.twoleavestea.com/cdn/shop/files/OrgMtnHighChai_naked50_spill_copy.webp?v=1774287422&width=360" class="product-img">
+                        <button class="btn-add-to-cart">+</button>
+                    </div>
+                    <h3 class="product-title">Classic Bamboo Tea Chest</h3>
+                    <p class="product-price">$42.95</p>
+                    <p class="product-desc">This 6-slot bamboo box offers a sampling of eight sachets each.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- [CORRECTED ZONE] CRAFTED FOR CAFES SECTIONS (Now on Main Page Sequence)   -->
+    <!-- ========================================================================= -->
+
+    <!-- SECTION: Crafted for Cafes (4 Box Grid) -->
+    <section class="crafted-cafes-block">
+        <h2 class="crafted-title">Crafted for Cafes</h2>
+        <p class="crafted-subtitle">We make teas designed for café life - consistent, easy to prepare, and reliable through busy service. From portioned sachets to smooth latte blends, everything is built to deliver great flavor with speed and ease.</p>
+        
+        <div class="crafted-cards-grid">
+            <div class="crafted-card">
+                <div class="crafted-icon-box">🌱</div>
+                <h3>Consistent Quality</h3>
+                <p>Balanced and reliable, cup after cup.</p>
+            </div>
+            <div class="crafted-card">
+                <div class="crafted-icon-box">🍹</div>
+                <h3>Easy to Prepare</h3>
+                <p>Designed for busy bars and smooth service.</p>
+            </div>
+            <div class="crafted-card">
+                <div class="crafted-icon-box">♻️</div>
+                <h3>Compostable Packaging</h3>
+                <p>Packaging that fits your workflow and leaves less behind.</p>
+            </div>
+            <div class="crafted-card">
+                <div class="crafted-icon-box">🧩</div>
+                <h3>Built for Partnership</h3>
+                <p>We show up like a good partner should - steady, responsive, and in it with you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Our Partners Carousel Slider (6 Colors Grid) -->
+    <section class="partners-carousel-section">
+        <span class="partners-tag">YOU'RE IN GOOD HANDS</span>
+        <h2 class="partners-section-heading">OUR PARTNERS</h2>
+        <p class="partners-subheading">We're proud to be found on menus across the country. Here's a peek at some of the great company we keep:</p>
+        
+        <div class="partners-slider-container">
+            <button class="partner-arrow prev-partner-btn" onclick="movePartnerSlider(-1)">&#10094;</button>
+            <button class="partner-arrow next-partner-btn" onclick="movePartnerSlider(1)">&#10095;</button>
+            
+            <div class="partners-slider-wrapper">
+                <div class="partners-track" id="partners-track-element">
+                    <div class="partner-card-box p-bg-green"><div class="partner-logo-circle">Logo</div><h3>ASPEN SNOWMASS</h3><p>*Official Hot Brewed Tea of Aspen Snowmass*...</p></div>
+                    <div class="partner-card-box p-bg-orange"><div class="partner-logo-circle">Logo</div><h3>CAFFE NERO (US)</h3><p>The Caffè Nero philosophy is simple: Premium Italian coffee...</p></div>
+                    <div class="partner-card-box p-bg-blue"><div class="partner-logo-circle">Logo</div><h3>ELLIANOS COFFEE</h3><p>Ellianos Coffee started with a simple idea: serve high-quality coffee...</p></div>
+                    <div class="partner-card-box p-bg-brown"><div class="partner-logo-circle">Logo</div><h3>GIULIA</h3><p>Giulia is a cozy Italian bakery where tradition blends with chic...</p></div>
+                    <div class="partner-card-box p-bg-salmon"><div class="partner-logo-circle">Logo</div><h3>SCOOTERS COFFEE</h3><p>Scooter's Coffee began in 1998 in Bellevue, Nebraska...</p></div>
+                    <div class="partner-card-box p-bg-darkyellow"><div class="partner-logo-circle">Logo</div><h3>ZIGGI'S COFFEE</h3><p>What started as a small coffee shop on the corner of Main Street...</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Cafe Products 1-Card Active Sliding Window Slider -->
+    <section class="cafe-products-section">
+        <div class="cafe-badge-label">CAFE PRODUCTS</div>
+        <h2 class="cafe-products-heading">Our Teas & Formats</h2>
+        <p class="cafe-products-subtext">Whether you're serving one cup or a full menu, we've got you covered.</p>
+        
+        <div class="cafe-tabs-row">
+            <button class="cafe-tab-btn active" onclick="jumpToCafeProduct(0)">Whole Leaf Tea Sachets</button>
+            <button class="cafe-tab-btn" onclick="jumpToCafeProduct(1)">Pure Matcha</button>
+            <button class="cafe-tab-btn" onclick="jumpToCafeProduct(2)">Tea Lattes</button>
+            <button class="cafe-tab-btn" onclick="jumpToCafeProduct(3)">Iced Tea</button>
+        </div>
+
+        <div class="cafe-single-carousel-container">
+            <button class="single-arrow left-single-btn" onclick="moveSingleSlider(-1)">&#10094;</button>
+            <button class="single-arrow right-single-btn" onclick="moveSingleSlider(1)">&#10095;</button>
+            
+            <div class="single-slider-wrapper">
+                <div class="single-product-track" id="single-product-track-element">
+                    
+                    <!-- SLIDE 1: Whole Leaf Tea Sachets (Blue Panel) -->
+                    <div class="single-product-slide slide-blue-theme">
+                        <div class="slide-graphic-side"><div class="circle-graphic-box">⏳</div></div>
+                        <div class="slide-info-side">
+                            <h3>Whole Leaf Tea Sachets</h3>
+                            <p class="slide-intro-paragraph">Loose-leaf flavor in convenient pyramid sachets — compostable, clean, and consistent in taste.</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2: Pure Matcha (Green Panel) -->
+                    <div class="single-product-slide slide-green-theme">
+                        <div class="slide-graphic-side"><div class="circle-graphic-box">🍵</div></div>
+                        <div class="slide-info-side">
+                            <h3>Pure Matcha</h3>
+                            <p class="slide-intro-paragraph">We offer a range of pure matcha from finest-quality ceremonial grade.</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3: Tea Lattes (Orange Panel) -->
+                    <div class="single-product-slide slide-orange-theme">
+                        <div class="slide-graphic-side"><div class="circle-graphic-box">🧋</div></div>
+                        <div class="slide-info-side">
+                            <h3>Tea Lattes</h3>
+                            <p class="slide-intro-paragraph">Easy to make powdered tea lattes that are vegan and gluten-free.</p>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 4: Iced Tea (Red Panel) -->
+                    <div class="single-product-slide slide-red-theme">
+                        <div class="slide-graphic-side"><div class="circle-graphic-box">🍹</div></div>
+                        <div class="slide-info-side">
+                            <h3>Iced Tea</h3>
+                            <p class="slide-intro-paragraph">Economical, Eco-friendly, Healthy Iced tea makes a wonderful base.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Explore Product Specific Orange Banner -->
+    <div class="explore-specific-orange-banner">
+        <span class="yellow-media-label">PRODUCT AND MEDIA FILES</span>
+        <h2 class="explore-banner-title">Need something more specific?</h2>
+        <p class="explore-banner-desc">Visit our product and media download page for product spec sheets and images.</p>
+        <!-- LINK REPLACEMENT ANCHOR SPACE -->
+        <a href="https://example.com/your-destination-link" target="_blank" class="explore-blue-pill-btn">Explore</a>
+    </div>
+
+    <!-- SECTION: Wholesale Onboarding Registration split columns layout -->
+    <div class="wholesale-onboarding-split-section">
+        <div class="onboarding-left-flow">
+            <h3>Getting Started</h3>
+            <p>Ready to bring our premium whole leaf teas to your customers? Access our portals below to place your standard wholesale orders securely.</p>
+            <a href="#" class="onboarding-login-anchor-link">Wholesale Login &rarr;</a>
+            <br><br>
+            <a href="#" class="onboarding-login-anchor-link">Displays & Starter Kits &rarr;</a>
+        </div>
+        
+        <div class="onboarding-right-green-card">
+            <h3>New to Two Leaves and a Bud?</h3>
+            <p>Want to apply for a wholesale account? Fill out our simple online request form and our dedicated team will set up your portal assets.</p>
+            <a href="#" class="green-card-white-pill-btn">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- SECTION: Steep with us subscription banner wrapper -->
+    <div class="steep-with-us-footer-banner">
+        <div class="steep-left-subscription-zone">
+            <h2 class="steep-main-heading">STEEP WITH US</h2>
+            <p class="steep-sub-description">Get news stories, brewing tips, and special offers straight to your inbox.</p>
+            <form class="steep-input-form-row" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="name@email.com" class="steep-email-box" required>
+                <button type="submit" class="steep-submit-pill-btn">Submit</button>
+            </form>
+        </div>
+        <div class="steep-right-socials-zone">
+            <a href="#" class="social-circle-vector-link">f</a>
+            <a href="#" class="social-circle-vector-link">📷</a>
+            <a href="#" class="social-circle-vector-link">in</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTEXT DARK BLUE SUB DIRECTORY FOOTER LINKS GRID -->
+    <footer class="dark-corporate-blue-footer">
+        <div class="footer-directory-grid">
+            <div class="directory-column">
+                <h5>Tea Varieties</h5>
+                <ul>
+                    <li><a href="#">Whole Leaf Tea Sachets</a></li>
+                    <li><a href="#">Pure Matcha</a></li>
+                    <li><a href="#">Tea Lattes</a></li>
+                    <li><a href="#">Iced Tea</a></li>
+                </ul>
+            </div>
+            <div class="directory-column">
+                <h5>Collections</h5>
+                <ul>
+                    <li><a href="#">Matcha</a></li>
+                    <li><a href="#">Chai</a></li>
+                    <li><a href="#">Organic Tea</a></li>
+                    <li><a href="#">Naked Tea Sachets</a></li>
+                    <li><a href="#">Black Tea</a></li>
+                    <li><a href="#">Green Tea</a></li>
+                </ul>
+            </div>
+            <div class="directory-column">
+                <h5>Lattes</h5>
+                <ul>
+                    <li><a href="#">Nice Matcha</a></li>
+                    <li><a href="#">Barista Matcha</a></li>
+                    <li><a href="#">Nice Chai</a></li>
+                </ul>
+            </div>
+            <div class="directory-column">
+                <h5>Learn</h5>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Our Spirit</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="directory-column">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FINAL LANDSCAPE MOUNTAIN GRAPHIC BRAND FOOTER -->
+    <div class="bottom-landscape-graphic-wrapper">
+        <h1 class="landscape-brand-title">two leaves<br>and a bud</h1>
+        <div class="landscape-copyright-bar">
+            © TWO LEAVES AND A BUD 2026<br>
+            <span>SITE BY MANUFACTUR</span>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT MASTER OPERATIONS PANEL ENGINE -->
+    <script>
+        // Dropdowns Trigger Toggle Show rules
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            const isAlreadyBlock = (window.getComputedStyle(el).display === 'block');
+            document.querySelectorAll('.mega-dropdown-panel').forEach(p => p.style.display = 'none');
+            el.style.display = isAlreadyBlock ? 'none' : 'block';
+        }
+
+        // 9 Products Slider Movement Control Logic
+        let productIdx = 0;
+        function moveProductSlider(dir) {
+            const track = document.getElementById('main-product-track-element');
+            productIdx += dir;
+            if (productIdx < 0) productIdx = 0;
+            if (productIdx > 1) productIdx = 1; 
+            track.style.transform = `translateX(-${productIdx * 310}px)`;
+        }
+
+        // Partners 6 Box Slider Track Movement System
+        let partnerIdx = 0;
+        function movePartnerSlider(dir) {
+            const track = document.getElementById('partners-track-element');
+            partnerIdx += dir;
+            if (partnerIdx < 0) partnerIdx = 0;
+            if (partnerIdx > 2) partnerIdx = 2;
+            track.style.transform = `translateX(-${partnerIdx * 360}px)`;
+        }
+
+        // Formats Single Card Slider Control System
+        let singleProductIndex = 0;
+        const tabs = document.querySelectorAll('.cafe-tab-btn');
+        function updateSingleSlider() {
+            const track = document.getElementById('single-product-track-element');
+            track.style.transform = `translateX(-${singleProductIndex * 100}%)`;
+            tabs.forEach((tab, idx) => { tab.classList.toggle('active', idx === singleProductIndex); });
+        }
+        function moveSingleSlider(dir) {
+            singleProductIndex += dir;
+            if (singleProductIndex < 0) singleProductIndex = 3;
+            if (singleProductIndex > 3) singleProductIndex = 0;
+            updateSingleSlider();
+        }
+        function jumpToCafeProduct(idx) {
+            singleProductIndex = idx;
+            updateSingleSlider();
+        }
+    </script>
+</body>
+</html>
